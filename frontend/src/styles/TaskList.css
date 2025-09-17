@@ -1,0 +1,134 @@
+.single-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  height: 420px; /* Increased from 380px to 420px */
+  padding: 20px 0;
+}
+
+.carousel-item-wrapper {
+  width: 580px; /* Increased from 520px to 580px */
+  height: 370px; /* Increased from 320px to 370px */
+}
+
+.arrow {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 16px;
+  transition: all 0.3s ease;
+  color: #3c3c43;
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.08),
+    0 2px 4px rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+}
+
+.arrow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.5s ease;
+}
+
+.arrow:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.12),
+    0 4px 10px rgba(0, 0, 0, 0.08);
+  color: #1d1d1f;
+  border-color: rgba(255, 204, 2, 0.3);
+}
+
+.arrow:hover::before {
+  left: 100%;
+}
+
+.arrow:active {
+  transform: translateY(-1px) scale(1.02);
+}
+
+.arrow svg {
+  transition: transform 0.2s ease;
+}
+
+.arrow:hover svg {
+  transform: scale(1.1);
+}
+
+.carousel-placeholder {
+  width: 580px; /* Increased from 520px to 580px */
+  height: 370px; /* Increased from 320px to 370px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.placeholder-content {
+  text-align: center;
+  color: #8e8e93;
+}
+
+.placeholder-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.placeholder-content p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #3c3c43;
+  margin-bottom: 8px;
+}
+
+.placeholder-content small {
+  font-size: 0.9rem;
+  color: #8e8e93;
+}
+
+@media (max-width: 768px) {
+  .single-carousel {
+    height: 370px; /* Increased from 320px to 370px */
+  }
+  
+  .carousel-item-wrapper {
+    width: 320px; /* Increased from 280px to 320px */
+    height: 320px; /* Increased from 280px to 320px */
+  }
+
+  .carousel-placeholder {
+    width: 320px; /* Increased from 280px to 320px */
+    height: 320px; /* Increased from 280px to 320px */
+  }
+
+  .arrow {
+    width: 40px;
+    height: 40px;
+    margin: 0 8px;
+  }
+
+  .arrow svg {
+    width: 18px;
+    height: 18px;
+  }
+}
